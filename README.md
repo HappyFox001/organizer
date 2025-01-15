@@ -83,7 +83,7 @@ graph TD
     end
 ```
 
-### 📦 Core Components
+### 📂 Project Structure
 
 ```
 lib/
@@ -188,17 +188,6 @@ flutter run
 - 🎨 Google Fonts - Typography
 - 📸 Image Picker - Media Selection
 - 🔗 URL Launcher - External Links
-
-## 📂 Project Structure
-
-```
-lib/
-├── models/        # 📦 Data models
-├── providers/     # 🔄 State management
-├── pages/         # 📱 UI screens
-├── services/      # 🔧 Business logic
-└── widgets/       # 🧩 Reusable components
-```
 
 ## 🤝 Contributing
 
