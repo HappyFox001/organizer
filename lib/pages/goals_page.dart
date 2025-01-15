@@ -264,7 +264,10 @@ class _GoalCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         child: InkWell(
           onTap: () {
-            // Handle goal tap
+            showDialog(
+              context: context,
+              builder: (context) => _AddGoalDialog(goal: goal),
+            );
           },
           borderRadius: BorderRadius.circular(12),
           child: Padding(
@@ -441,7 +444,6 @@ class _GoalCard extends StatelessWidget {
 class _AddGoalDialog extends StatefulWidget {
   final Goal? goal;
 
-  // ignore: unused_element
   const _AddGoalDialog({Key? key, this.goal}) : super(key: key);
 
   @override
@@ -600,12 +602,12 @@ class _AddGoalDialogState extends State<_AddGoalDialog> {
       achievedAt: widget.goal?.achievedAt,
     );
 
-    if (widget.goal == null) {
-      context.read<GoalProvider>().addGoal(goal);
+    if (widget.goal != null) {
+      Provider.of<GoalProvider>(context, listen: false).updateGoal(goal);
     } else {
-      context.read<GoalProvider>().updateGoal(goal);
+      Provider.of<GoalProvider>(context, listen: false).addGoal(goal);
     }
 
-    Navigator.pop(context);
+    Navigator.of(context).pop();
   }
 }

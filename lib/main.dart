@@ -164,11 +164,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           title,
-          style: GoogleFonts.playfairDisplay(
-            textStyle: TextStyle(
-              color: themeProvider.accentColor,
-              fontWeight: FontWeight.w900,
-            ),
+          style: TextStyle(
+            color: themeProvider.accentColor,
+            fontWeight: FontWeight.w900,
+            fontFamily: 'PlayfairDisplay',
           ),
         ),
         actions: [
@@ -262,12 +261,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Text(
                         'Organize your life',
-                        style: GoogleFonts.playfairDisplay(
-                          textStyle: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: themeProvider.accentColor.withOpacity(1.0),
-                          ),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: themeProvider.accentColor.withOpacity(1.0),
+                          fontFamily: 'PlayfairDisplay',
                         ),
                       ),
                     ],
